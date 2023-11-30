@@ -1,0 +1,277 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    background-color: #F5F5DC;
+}
+
+.product-list {
+    flex: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.product {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 250px;
+    margin: 10px;
+    text-align: center;
+    transition: background-color 0.3s;
+    border-radius: 10px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    background-color: #fff; 
+}
+
+.product:hover {
+    background-color: #f0f0f0; 
+}
+
+.product img {
+    width: 100%;
+    max-height: 150px; 
+    object-fit: cover; 
+    margin-bottom: 10px; 
+}
+
+.product-name {
+    font-weight: bold;
+}
+
+.product-price {
+    color: green; 
+    font-weight: bold;
+    margin-top: 10px; 
+}
+
+.add-to-cart {
+    outline: none;
+    border: 1px solid green; 
+    background-color: white;
+    color: green; /* Change button colors */
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px; /* Add rounded corners to the button */
+}
+
+.add-to-cart:hover {
+    background-color: #e5e5e5; /* Change background color on hover */
+}
+
+/* Styling for the shopping cart */
+.cart {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 100%;
+    margin: 10px;
+    border-radius: 10px; /* Add a rounded border for a modern look */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+    transition: all 0.3s; /* Add smooth transition on hover */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content horizontally */
+}
+
+.cart:hover {
+    transform: scale(1.02); /* Scale up the cart on hover for an interactive effect */
+}
+
+.cart h2 {
+    text-align: center;
+    font-size: 24px; /* Increase the font size for the heading */
+    margin-bottom: 20px; /* Add more space below the heading */
+    color: #333; /* Change the heading color */
+}
+
+.cart-items-empty {
+    font-size: 18px;
+    color: #777; /* Set text color for an empty cart message */
+    text-align: center;
+    margin: 20px; /* Add some spacing around the message */
+    display: none; /* Initially, hide the empty cart message */
+}
+
+.cart-items {
+    padding: 20px;
+    height: 300px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Increase the gap between items for better spacing */
+}
+
+.cart h2 {
+    text-align: center;
+    font-size: 24px; /* Increase the font size for the heading */
+    margin-bottom: 20px; /* Add more space below the heading */
+    color: #333; /* Change the heading color */
+}
+
+/* .cart-items {
+    padding: 20px;
+    height: 300px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+} */
+
+.remove-button {
+    outline: none;
+    border: 1px solid #ccc;
+    background-color: #ff5733; /* Change button background color */
+    color: white; /* Change button text color */
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px; /* Add a slight border radius for rounded edges */
+    margin: 10px 20px 10px 100px; /* Center the buttons horizontally and provide vertical spacing */
+}
+
+.remove-button:hover {
+    background-color: #e5492f; /* Change button background color on hover */
+}
+
+.price {
+    color: green; /* Change the price color */
+    font-weight: bold;
+    margin-top: auto; /* Vertically center the price */
+    display: flex;
+    justify-content: center; /* Horizontally center the price */
+}
+
+.checkout-button {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    display: block;
+    margin: 20px auto; /* Increase margin and center the button */
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.checkout-button:hover {
+    background-color: darkgreen;
+}
+
+.price {
+    color: green;
+    font-weight: bold;
+}
+
+.checkout {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.checkout:hover {
+    background-color: darkgreen;
+}
+
+.navbar {
+    background-color: #333;
+}
+
+.navbar-brand {
+    font-size: 24px;
+}
+
+.navbar-nav .nav-item {
+    margin: 0 10px;
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffc107;
+}
+
+.navbar-toggler-icon {
+    background-color: #fff;
+}
+
+.navbar-collapse {
+    background-color: #333;
+}
+
+.navbar-nav .dropdown-menu {
+    background-color: #333;
+}
+
+.nav-item.dropdown:hover .dropdown-menu .dropdown-item {
+    color: #ffc107;
+}
+
+.navbar-nav .active .nav-link {
+    color: #ffc107;
+}
+/* Updated styling for the home section */
+.home {
+    text-align: center;
+    padding: 2rem;
+    color: #333;
+}
+
+.home h5 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.welcome-heading{
+    color: #8B4513;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Updated styling for the image carousel */
+.image-carousel {
+    max-width: 90%;
+    margin: 0 auto; /* Center the carousel horizontally */
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #ddd; /* Add a border around the carousel */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow */
+    border-radius: 10px; /* Add rounded corners for the carousel */
+    
+}
+
+.carousel-slide {
+    display: none;
+    text-align: center;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Add rounded corners for images */
+}
+
+.carousel-slide h3 {
+    font-size: 20px;
+    color: #333;
+    margin: 10px 0;
+}
+
+
