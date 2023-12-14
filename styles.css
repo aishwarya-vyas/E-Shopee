@@ -19,7 +19,7 @@ main {
 }
 
 .product-list {
-    flex: 2;
+    margin-left: 1.75rem;
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
@@ -31,7 +31,7 @@ main {
     width: 250px;
     margin: 10px;
     text-align: center;
-    transition: background-color 0.3s;
+    transition: background-color 0.4s;
     border-radius: 10px; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
     background-color: #fff; 
@@ -48,62 +48,48 @@ main {
     margin-bottom: 10px; 
 }
 
-.product-name {
-    font-weight: bold;
-}
-
-.product-price {
-    color: green; 
-    font-weight: bold;
-    margin-top: 10px; 
-}
-
 .add-to-cart {
     outline: none;
     border: 1px solid green; 
     background-color: white;
-    color: green; /* Change button colors */
+    color: green; 
     padding: 10px;
     cursor: pointer;
-    border-radius: 5px; /* Add rounded corners to the button */
+    border-radius: 5px; 
+}
+
+.price {
+    color: green; 
+    font-weight: bold;
 }
 
 .add-to-cart:hover {
-    background-color: #e5e5e5; /* Change background color on hover */
+    background-color: #e5e5e5;
 }
 
-/* Styling for the shopping cart */
 .cart {
     background-color: #fff;
     border: 1px solid #ccc;
     padding: 20px;
     width: 100%;
     margin: 10px;
-    border-radius: 10px; /* Add a rounded border for a modern look */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
-    transition: all 0.3s; /* Add smooth transition on hover */
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    transition: all 0.4s;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center the content horizontally */
+    align-items: center; 
 }
 
 .cart:hover {
-    transform: scale(1.02); /* Scale up the cart on hover for an interactive effect */
+    transform: scale(1.02);
 }
 
 .cart h2 {
     text-align: center;
-    font-size: 24px; /* Increase the font size for the heading */
-    margin-bottom: 20px; /* Add more space below the heading */
-    color: #333; /* Change the heading color */
-}
-
-.cart-items-empty {
-    font-size: 18px;
-    color: #777; /* Set text color for an empty cart message */
-    text-align: center;
-    margin: 20px; /* Add some spacing around the message */
-    display: none; /* Initially, hide the empty cart message */
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
 }
 
 .cart-items {
@@ -112,66 +98,22 @@ main {
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Increase the gap between items for better spacing */
+    gap: 15px;
 }
-
-.cart h2 {
-    text-align: center;
-    font-size: 24px; /* Increase the font size for the heading */
-    margin-bottom: 20px; /* Add more space below the heading */
-    color: #333; /* Change the heading color */
-}
-
-/* .cart-items {
-    padding: 20px;
-    height: 300px;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 15px; 
-} */
 
 .remove-button {
     outline: none;
     border: 1px solid #ccc;
-    background-color: #ff5733; /* Change button background color */
-    color: white; /* Change button text color */
+    background-color: #ff5733; 
+    color: white; 
     padding: 10px 20px;
     cursor: pointer;
-    border-radius: 5px; /* Add a slight border radius for rounded edges */
-    margin: 10px 20px 10px 100px; /* Center the buttons horizontally and provide vertical spacing */
+    border-radius: 5px;
+    margin: 10px 20px 10px 100px; 
 }
 
 .remove-button:hover {
-    background-color: #e5492f; /* Change button background color on hover */
-}
-
-.price {
-    color: green; /* Change the price color */
-    font-weight: bold;
-    margin-top: auto; /* Vertically center the price */
-    display: flex;
-    justify-content: center; /* Horizontally center the price */
-}
-
-.checkout-button {
-    background-color: green;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    display: block;
-    margin: 20px auto; /* Increase margin and center the button */
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.checkout-button:hover {
-    background-color: darkgreen;
-}
-
-.price {
-    color: green;
-    font-weight: bold;
+    background-color: #e5492f; 
 }
 
 .checkout {
@@ -197,38 +139,11 @@ main {
 
 .navbar-nav .nav-item {
     margin: 0 10px;
-}
-
-.navbar-nav .nav-link {
     color: #fff;
     font-size: 18px;
     text-transform: uppercase;
 }
 
-.navbar-nav .nav-link:hover {
-    color: #ffc107;
-}
-
-.navbar-toggler-icon {
-    background-color: #fff;
-}
-
-.navbar-collapse {
-    background-color: #333;
-}
-
-.navbar-nav .dropdown-menu {
-    background-color: #333;
-}
-
-.nav-item.dropdown:hover .dropdown-menu .dropdown-item {
-    color: #ffc107;
-}
-
-.navbar-nav .active .nav-link {
-    color: #ffc107;
-}
-/* Updated styling for the home section */
 .home {
     text-align: center;
     padding: 2rem;
@@ -240,20 +155,19 @@ main {
     margin-bottom: 20px;
 }
 
-.welcome-heading{
+.welcome{
     color: #8B4513;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-/* Updated styling for the image carousel */
-.image-carousel {
+.carousel {
     max-width: 90%;
-    margin: 0 auto; /* Center the carousel horizontally */
+    margin: 0 auto;
     overflow: hidden;
     position: relative;
-    border: 1px solid #ddd; /* Add a border around the carousel */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow */
-    border-radius: 10px; /* Add rounded corners for the carousel */
+    border: 1px solid #ddd;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
+    border-radius: 10px;
     
 }
 
@@ -265,13 +179,5 @@ main {
 .carousel-slide img {
     width: 100%;
     height: auto;
-    border-radius: 10px; /* Add rounded corners for images */
+    border-radius: 10px;
 }
-
-.carousel-slide h3 {
-    font-size: 20px;
-    color: #333;
-    margin: 10px 0;
-}
-
-
