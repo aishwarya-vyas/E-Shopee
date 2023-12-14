@@ -1,4 +1,3 @@
-// Sample product data
 const products = [
     { name: 'Highlighters', price: 850.00 },
     { name: 'Watch', price: 900.00 },
@@ -12,19 +11,15 @@ const products = [
     { name: 'T-Shirts', price: 500.00 }
 ];
 
-// Initialize cart and total
 let cart = [];
 let total = 0;
 
-// Function to add a product to the cart
 function addToCart(product) {
     cart.push(product);
     total += product.price;
     updateCartDisplay();
 }
 
-// Function to update the cart display
-// Function to remove a product from the cart
 function removeFromCart(product) {
     const index = cart.findIndex((item) => item.name === product.name);
 
@@ -35,7 +30,6 @@ function removeFromCart(product) {
     }
 }
 
-// Update the click event listener for the "Remove" button
 function updateCartDisplay() {
     const cartItems = document.querySelector('.cart-items');
     cartItems.innerHTML = '';
@@ -52,10 +46,8 @@ function updateCartDisplay() {
         removeButton.innerText = 'Remove';
         removeButton.className = 'remove-button';
 
-        // Add a click event listener for the remove button
         removeButton.addEventListener('click', () => {
             removeFromCart(product);
-            // After removal, we can update the cart display and reassign the "remove-button" click event
             updateCartDisplay();
         });
 
@@ -69,34 +61,24 @@ function updateCartDisplay() {
     cartTotal.innerText = `₹${total.toFixed(2)}`;
 }
 
-// Rest of your code remains the same
-
-// Add click event listeners to Add to Cart buttons
 const addToCartButtons = document.querySelectorAll('.add-to-cart');
 addToCartButtons.forEach((button, index) => {
     button.addEventListener('click', () => {
         addToCart(products[index]);
         $('#addedToCartModal').modal('show');
-        // Toggle the "clicked" class to change the button color
-        button.classList.toggle('clicked');
     });
 });
 
 function goToCart() {
-    // Get the element (e.g., by its ID) of the shopping cart section
-    const cartSection = document.getElementById('sc'); // Use the appropriate ID of your cart section
-
-    // Scroll to the cart section
+    const cartSection = document.getElementById('sc');
     cartSection.scrollIntoView({ behavior: 'smooth' });
-
     $('#addedToCartModal').modal('hide');
 }
 
 const checkoutButton = document.querySelector('.checkout');
 checkoutButton.addEventListener('click', () => {
     updateCheckoutModal();
-    $('#checkoutModal').modal('show'); // Open the checkout modal
-    // You can add additional checkout logic here if needed
+    $('#checkoutModal').modal('show');
 });
 
 function updateCheckoutModal() {
@@ -104,33 +86,23 @@ function updateCheckoutModal() {
     modalTotalAmount.textContent = total.toFixed(2);
 }
 
-// JavaScript for the image carousel
+
 let currentSlide = 0;
 const slides = document.querySelectorAll('.carousel-slide');
-
 function showSlide(index) {
     slides[currentSlide].style.display = 'none';
     slides[index].style.display = 'block';
     currentSlide = index;
 }
 
-// Display the first slide
 showSlide(currentSlide);
 
-// Function to show the next slide
 function nextSlide() {
     const nextIndex = (currentSlide + 1) % slides.length;
     showSlide(nextIndex);
 }
 
-// Function to show the previous slide
-function prevSlide() {
-    const prevIndex = (currentSlide - 1 + slides.length) % slides.length;
-    showSlide(prevIndex);
-}
-
-// Automatically advance the slides every few seconds
-setInterval(nextSlide, 4000); // Changes the slide after every 2 seconds
+setInterval(nextSlide, 4000); 
 
 function placeorder(){
     window.location.href = 'payment.html';
