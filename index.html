@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Shopee</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Add these lines inside the <head> section of your HTML -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
@@ -16,10 +15,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#">E-Shopee</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div>
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="#h">Home</a>
@@ -37,9 +33,9 @@
     
     <main>
         <section class="home" id="h">
-            <h5 class="welcome-heading">Welcome to E-Shopee your one-stop destination for high-quality products.</h5>
+            <h5 class="welcome">Welcome to E-Shopee your one-stop destination for high-quality products.</h5>
             <br>
-            <div class="image-carousel">
+            <div class="carousel">
                 <div class="carousel-slide">
                     <img src="https://m.media-amazon.com/images/I/71Ie3JXGfVL._SX3000_.jpg" alt="Deal 1">
                 </div>
@@ -123,34 +119,33 @@
             <button class="checkout">Checkout</button>
         </section>
     </main>
-    <div class="modal fade" id="checkoutModal" tabindex="-1" role="dialog" aria-labelledby="checkoutModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
+    <div class="modal fade" id="checkoutModal">
+        <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="checkoutModalLabel">Checkout</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
+                    <h5 id="checkoutModalLabel">Checkout</h5>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span>&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <!-- Add your checkout form or content here -->
                     <p>Total amount: ₹<span id="modalTotalAmount">0.00</span></p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="placeorder()">Place Order</button>
+                    <button type="button" class="btn btn-primary" onclick="placeorder()">Place Order</button>
                 </div>
             </div>
         </div>
     </div>
     
-    <div class="modal fade" id="addedToCartModal" tabindex="-1" role="dialog" aria-labelledby="addedToCartModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
+    <div class="modal fade" id="addedToCartModal">
+        <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="addedToCartModalLabel">Added to Cart</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
+                    <h5 id="addedToCartModalLabel">Added to Cart</h5>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span>&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
